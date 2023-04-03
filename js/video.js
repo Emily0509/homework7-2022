@@ -45,7 +45,13 @@ document.querySelector("#mute").addEventListener("click", function() {
  }
 });
 
+const slider = document.getElementById("slider");
+const volumeInfo = document.getElementById("volume");
 
+slider.addEventListener("input", function() {
+	vid.volume = slider.value/100;
+	volumeInfo.innerHTML = slider.value + "%"; 
+});
 
 document.querySelector("#vintage").addEventListener("click", function() {
 	vid.classList.add("oldSchool");
