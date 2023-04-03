@@ -18,14 +18,14 @@ document.querySelector("#pause").addEventListener("click", function() {
 
 document.querySelector("#slower").addEventListener("click", function() {
 	let currentSpeed = vid.playbackRate;
-	let newSpeed = currentSpeed * 0.9;
+	let newSpeed = currentSpeed - 0.1;
 	vid.playbackRate = newSpeed;
 	console.log(newSpeed);
 });
 
 document.querySelector("#faster").addEventListener("click", function() {
 	let currentSpeed = vid.playbackRate;
-	let newSpeed = currentSpeed * 1.1;
+	let newSpeed = currentSpeed + 0.1;
 	vid.playbackRate = newSpeed;
 	console.log(newSpeed);
 });
